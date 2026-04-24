@@ -13,8 +13,8 @@ class InsurancePlatform(gl.Contract):
     total_approved_claims: u256
     policy_data: DynArray[str]
 
-    def __init__(self, owner_address: str):
-        self.owner = Address(owner_address)
+    def __init__(self, owner_address: Address):
+        self.owner = owner_address
         self.policy_counter = u256(0)
         self.total_policies = u256(0)
         self.total_claims = u256(0)
